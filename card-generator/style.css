@@ -1,0 +1,75 @@
+body {
+  background-color: #f89eec;
+  margin-top: 100px;
+  font-family: system-ui;
+}
+
+#form-container {
+  background-color: #924cec;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+#card-container {
+  background-image: url("markus-spiske-vblGMzpFvmY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  margin: 0 auto;
+  max-width: 500px;
+  color: white;
+}
+
+#card-container.writting {
+  background-image: url("tra-nguyen-TVSRWmnW8Us-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 500px 400px;
+  margin: 0 auto;
+  max-width: 500px;
+  color: yellow;
+}
+
+#card-container-inner {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 400px;
+  text-align: center;
+}
+
+#card-container-inner h2 {
+  font-size: 2rem;
+  padding-top: 30px;
+}
+
+.Fireworks #card-container-inner h2 {
+  font-size: 3rem;
+  padding-top: 30px;
+}
+
+#card-container-inner h3 {
+  font-size: 2rem;
+  padding-top: 30px;
+}
+
+#card-container-inner h4 {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+
+#card-container-inner a {
+  color: white;
+}
