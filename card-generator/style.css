@@ -18,6 +18,23 @@ body {
   display: none;
 }
 
+.name,
+.message {
+  height: 10vw;
+  width: 10vw;
+}
+
+#theme {
+  height: 7vh;
+  width: 10vw;
+  align-content: center;
+}
+
+.button {
+  background-color: #f89eec;
+  font-size: 1em;
+}
+
 input[type="submit"] {
   display: block;
   margin: 0 auto;
@@ -74,33 +91,39 @@ input[type="submit"] {
   color: white;
 }
 
-
-.card:hover{
-  margin:8px;
+.card:hover {
+  margin: 8px;
   animation-name: cards;
   animation-duration: 0.5s;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
 
-
-
 .card {
-  margin:8px;
+  margin: 8px;
   animation-name: cards-reverse;
   animation-duration: 0.5s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes cards {
-  0% {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transform: scale(1);}
-  100% {box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2); transform: scale(1.05);}
-
-  
+  0% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
 }
 
 @keyframes cards-reverse {
-  0% {box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2); transform: scale(1.05);}
-  1000% {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);transform: scale(1);}
-
+  0% {
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  1000% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+  }
 }
