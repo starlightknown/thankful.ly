@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeachersDay</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gif">
+    </div>
+    <div class="pop-up">
+      <div id="wrapper">
+        <div class="envelope open">
+          <div class="flap front"></div>
+          <div class="flap top"></div>
+          <div class="letter"></div>
+        </div>
+      </div>
+    </div>
+    <div class="book">
+      <div class="book-first"></div>
+    </div>
+
+    <script src="./confetti.js"></script>
+    <script>
+      const startit = () => {
+        setTimeout(function () {
+          confetti.start();
+        }, 2000);
+      };
+
+      const stopit = () => {
+        setTimeout(function () {
+          confetti.stop();
+        }, 7000);
+      };
+
+      startit();
+      stopit();
+    </script>
+    
+    <div class="let">
+      <div class="happy">
+        <h1>
+          <span>H</span>
+          <span>A</span>
+          <span>P</span>
+          <span>P</span>
+          <span>Y</span>
+        </h1>
+      </div>
+      <div class="happy">
+        <h1 >
+          <span>T</span>
+          <span>E</span>
+          <span>A</span>
+          <span>C</span>
+          <span>H</span>
+          <span>E</span>
+          <span>R</span>
+          <span>S</span>
+        </h1>
+      </div>
+      <div class="happy">
+        <h1 >
+          <span>D</span>
+          <span>A</span>
+          <span>Y</span>
+        </h1>
+      </div>
+    </div>
+  </body>
+</html>
