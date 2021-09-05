@@ -1,386 +1,222 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+#mySidenav a {
+	position: absolute;
+	left: -80px;
+	transition: 0.3s;
+	padding: 15px;
+	width: 100px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	border-radius: 0 5px 5px 0;
   }
   
-  
-  
-  /* letter open css  */
-  
-  
-  
-  #wrapper {
-    width: auto;
-    margin: auto;
+  #mySidenav a:hover {
+	left: 0;
   }
   
-  .envelope {
-    width: 200px;
-    height: 100px;
-    margin: 0 auto 0;
-    background: #ddd;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
-    position: relative;
-    perspective: 800px;
-  }
-  .envelope:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border: 0 solid rgba(0, 0, 0, 0.25);
-    border-width: 45px 100px;
-    border-top-color: transparent;
-    z-index: 2;
+  #about {
+	top: 20px;
+	background-color: #04AA6D;
   }
   
-  .envelope .flap {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    border: 0 solid transparent;
-    border-width: 50px 100px;
-    z-index: 3;
-  }
-  .envelope .flap.front {
-    border-left-color: #eee;
-    border-right-color: #eee;
-    border-bottom-color: #ccc;
-    z-index: 3;
-  }
-  .envelope .flap.front:after {
-    content: "";
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: -100px;
-    bottom: -50px;
-    border: 0 solid transparent;
-    border-width: 49px 100px;
-    border-bottom-color: #eee;
+  #gift {
+	top: 80px;
+	background-color: #2196F3;
   }
   
-  .envelope .flap.top {
-    border-top-width: 55px;
-    border-top-color: #aaa;
-    z-index: 3;
-    animation-duration: 1s;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-    -webkit-transform-origin-y: top;
-    transform-origin-y: top;
-    perspective: 800;
-    transform-style: preserve-3d;
-  }
-  .envelope.open .flap.top {
-    animation-name: flip;
-  }
-  .envelope .flap.top:after {
-    content: "";
-    position: absolute;
-    left: -100px; /* border-left-width */
-    top: -55px; /* border-top-width */
-    width: 100%;
-    height: 0;
-    border: 0 solid transparent;
-    border-width: 54px 100px;
-    border-top-color: #eee;
+  #thank {
+	top: 140px;
+	background-color: #f44336;
   }
   
-  .envelope .letter {
-    position: absolute;
-    width: 194px;
-    height: 84px;
-    background: url(./images/front.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 8px;
-    left: 3px;
-    border: 1px solid #ccc;
-    z-index: 1;
-    animation-duration: 2s;
-    animation-delay: 9.5s;
-    animation-fill-mode: forwards;
-    transform-style: preserve-3d;
+  #contact {
+	top: 200px;
+	background-color: #555
   }
-  .envelope.open .letter {
-    animation-name: remove;
-  }
-  .envelope .letter:before,
-  .envelope .letter:after {
-    content: "";
-    position: absolute;
-    width: 192px;
-    height: 75%;
-    left: -1px;
-    background: #fff;
-    border: 1px solid #ccc;
-    animation-duration: 1s;
-    animation-delay: 12s;
-    animation-fill-mode: forwards;
-    -webkit-transform-origin-y: top;
-    transform-origin-y: top;
-    transform-style: preserve-3d;
-    transform: rotateX(10deg);
-  }
-  .envelope .letter:before {
-    z-index: 1;
-  }
-  .envelope.open .letter:before {
-    animation-name: fold-up;
-  }
-  .envelope .letter:after {
-    animation-delay: 13s;
-    animation-fill-mode: forwards;
-    -webkit-transform-origin-y: bottom;
-    transform-origin-y: bottom;
-    transform: rotateX(-5deg);
-    bottom: 0;
-  }
-  .envelope.open .letter:after {
-    animation-name: fold-down;
-  }
-  
-  
-  
-  
-  /* letter open animation */
-  
-  
-  
-  
-  @keyframes flip {
-    100% {
-      transform: rotateX(180deg);
-      z-index: 1;
-    }
-  }
-  
-  @keyframes remove {
-    50% {
-      top: -120px;
-    }
-    100% {
-      top: 8px;
-      z-index: 3;
-    }
-  }
-  
-  @keyframes fold-up {
-    from {
-    }
-    to {
-      transform: rotateX(140deg);
-    }
-  }
-  
-  @keyframes fold-down {
-    from {
-    }
-    to {
-      transform: rotateX(-140deg);
-    }
-  }
-  
-  
-  
-  
-  /* letter drop from top animation  */
-  
-  
-  
-  
-  .pop-up {
-    margin-top: -230px;
-    animation: drop 3s ease forwards;
-  }
-  
-  @keyframes drop {
-    0% {
-    }
-    100% {
-      transform: translateY(300px);
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  
-  /* image .pop-up with rotating animation */
-  
-  
-  
-  
-  .book{
-  
-    height: 50px;
-    width: 50px;
-    margin: auto;
-    margin-top: 220px;
-    z-index: 6;
-    opacity: 0;
-    animation: circles 3s 15s ease forwards;
-  }
-  
-  
-  
-  @keyframes circles{
-    0%{
-          transform: scale(1) rotate(0deg) ;
-          border-radius: 20%;
-          opacity: 0.5;
-    }
-    25%{
-          transform: scale(2) rotate(0deg);
-          border-radius: 20%;
-          opacity: 1;
-    }
-    50%{
-          transform: scale(2) rotate(270deg);
-          border-radius: 50%;
-          opacity: 1;
-    }
-    75%{
-          transform: scale(3) rotate(270deg);
-          border-radius: 50%;
-          opacity: 1;
-    }
-    100%{
-          transform: scale(5) rotate(0deg);
-          border-radius: 20%;
-          opacity: 1;
-    }
-  }
-  
-  .book-first{
-    height: 100%;
-    width: 100%;
-    font-size: 12px;
-    z-index: 7;
-    background: url(front.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-  }
-  
-   
-  
-  /* dancing letter css wiht animation */
-  
-  
-  
-  
-  
-  
-  .let{
-    margin-top: 120px;
-    font-size: 10px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    opacity: 0;
-    animation: textview 1s 20s ease forwards;
-  }
-  .happy h1{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .happy h1 span{
-    color: #262626;
-    background: #fff; 
-    padding: 4px 6px; 
-    display: table-cell; 
-    box-shadow: inset 0 0 5px 
-              rgba(0, 0, 0, 0.3), 
-                  0 5px 0 #ccc; 
-     animation: animate 0.5s infinite; 
-  }
-  
-  
-  
-  @keyframes animate { 
-    0% { 
-      transform: translateY(0px); 
-    } 
-  
-    50% { 
-      transform: translateY(-20px); 
-    } 
-  
-    100% { 
-      transform: translateY(0px); 
-    } 
-  } 
-  
-  
-  
-  h1 span:nth-child(1) { 
-    animation-delay: 0.1s; 
-  } 
-  
-  h1 span:nth-child(2) { 
-    animation-delay: 0.2s; 
-  } 
-  
-  h1 span:nth-child(3) { 
-    animation-delay: 0.3s; 
-  } 
-  
-  h1 span:nth-child(4) { 
-    animation-delay: 0.4s; 
-  } 
-  
-  h1 span:nth-child(5) { 
-    animation-delay: 0.5s; 
-  } 
-  
-  h1 span:nth-child(6) { 
-    animation-delay: 0.6s; 
-  } 
-  
-  h1 span:nth-child(7) { 
-    animation-delay: 0.7s; 
-  } 
-  
-  h1 span:nth-child(8) { 
-    animation-delay: 0.8s; 
-  } 
-  
-  h1 span:nth-child(9) { 
-    animation-delay: 0.9s; 
-  } 
-  
-  h1 span:nth-child(10) { 
-    animation-delay: 1s; 
-  } 
-  
-  
-  
-  @keyframes textview {
-    100%{
-      opacity: 1;
-    }
-  }
-  
-  
-/* gif css and animation here */
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background: url(photo-1548425083-4261538dbca4.jpeg);
+	background-size: cover;
+}
+.mobile
+{
+	position: relative;
+	width: 270px;
+	height: 480px;
+	background: #020c17;
+}
+.top
+{
+	position: absolute;
+	top: -50px;
+	width: 100%;
+	height: 50px;
+	background: #efefef;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+}
+.top:before
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translateY(-50%);
+	width: 4px;
+	height: 4px;
+	background: #ccc;
+	border: 2px solid #aaa;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1px #999;
+}
+.top:after
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 40px;
+	height: 3px;
+	background: #333;
+	border: 2px solid #aaa;
+	border-radius: 3px;
+}
+.bottom
+{
+	position: absolute;
+	bottom: -50px;
+	width: 100%;
+	height: 50px;
+	background: #efefef;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+.bottom:before
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 15px;
+	height: 15px;
+	border: 2px solid #999;
+	cursor: pointer;
+	border-radius: 6px;
+}
+.screen
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.screen img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: 0.5s;
+}
+.screen.active img
+{
+	opacity: 1;
+}
+.screen:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.1);
+	z-index: 1;
+	transform: skewX(-5deg);
+}
+h2
+{
+	color: #fff;
+	font-weight: 200;
+	font-size: 3.5em;
+	z-index: 1;
+	transform: translateY(50px);
+	line-height: 0.4em;
+	transition: 0.5s;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	opacity: 0;
+}
+h2 span
+{
+	font-size: 0.4em;
+}
+.screen.active h2
+{
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+.screen ul
+{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+	display: flex;
+	z-index: 1;
+	justify-content: space-around;
+	width: 100%;
+}
+.screen ul li
+{
+	list-style: none;
+	color: #fff;
+	font-size: 1.5em;
+	padding-bottom: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.screen.active ul li
+{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.5s;
+}
+.screen.active ul li:nth-child(2)
+{
+	transition-delay: .7s;
+}
+.screen.active ul li:nth-child(3)
+{
+	transition-delay: .9s;
+}
+.screen.active ul li:nth-child(4)
+{
+	transition-delay: 1.1s;
+}
+.screen.active ul li .fa
+{
+	transition: 0.5s;
+}
+.screen.active ul li:hover .fa
+{
+	transform: translateY(-10px);
+}
 
-
-
-.gif{
-    margin-top: 34px;
-    height: 50px;
-    width:100%;
-    background: url(./images//blast.gif);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-    animation: textview 1s 20s ease forwards;
-  }
-  
