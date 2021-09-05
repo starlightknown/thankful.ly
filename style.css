@@ -10,17 +10,6 @@
 	color: white;
 	border-radius: 0 5px 5px 0;
   }
-
-  .main {
-      text-align: center;
-  }
-  h4 {
-      margin-top: 0;
-  }
-  #big-text {
-      font-size: 70px;
-      margin: 50px auto 0 auto;
-  }
   
   #mySidenav a:hover {
 	left: 0;
@@ -32,7 +21,7 @@
   }
   
   #gift {
-	/* top: 80px; */
+	top: 80px;
 	background-color: #2196F3;
   }
   
@@ -49,12 +38,12 @@ body
 {
 	margin: 0;
 	padding: 0;
-	/* display: flex; */
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	font-family: 'Poppins', sans-serif;
-	background: url(https://source.unsplash.com/random?teachers%20day);
+	background: url(photo-1548425083-4261538dbca4.jpeg);
 	background-size: cover;
 }
 .mobile
