@@ -1,3 +1,4 @@
+# Check us it out at: https://thankyou-for-teaching.us
 
 ## 💡 Inspiration -
 
