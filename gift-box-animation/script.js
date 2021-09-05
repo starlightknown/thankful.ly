@@ -1,11 +1,8 @@
 const present = document.querySelector('.present');
 present.onclick = () => present.classList.toggle('open');
 
-const giftBox = document.querySelector('.gift-box');
-giftBox.onclick = () => giftBox.
 
 
-  
 
 (function () {
   'use strict';

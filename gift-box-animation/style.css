@@ -465,10 +465,3 @@ input:focus {
 button:hover {
 	background-color: #2a94f4;
 }
-
-
-/* gift box fade out onclick */
-@keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
-}
