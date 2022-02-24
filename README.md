@@ -1,5 +1,9 @@
 # Check us it out at: https://thankyou-for-teaching.us
 
+The demo is running in test mode -- use 4242424242424242 as a test card number with any CVC + future expiration date.
+
+Use the 4000002500003155 test card number to trigger a 3D Secure challenge flow.
+
 ## 💡 Inspiration -
 
 for all the hard work our teachers do for us, we thought of gifting them something special but you might not be able to go to school and give them something because everything is online, we bring you this platform that will help you gift them something memorable.
